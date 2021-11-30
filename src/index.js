@@ -68,5 +68,11 @@ document.addEventListener('drag', function(){
 });
 // Drop
 document.addEventListener('drop', function(){
-    h1.style.color = 'Salmon';
+    h1.style.backgroundColor = 'Salmon';
+});
+
+// Copy
+document.addEventListener('copy', function(){
+    nav.style.backgroundColor = 'Indigo';
+    nav.style.color = 'GhostWhite';
 });

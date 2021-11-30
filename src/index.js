@@ -51,4 +51,10 @@ const homeLink = nav.querySelector('.nav-link');
 homeLink.addEventListener('click', function(event){
     event.preventDefault();
     homeLink.style.color = 'PeachPuff';
-})
+});
+
+// Wheel
+const introWelcome = introHeader.querySelector('h2');
+introWelcome.addEventListener('wheel', function(){
+    introWelcome.style.color = 'Violet';
+});

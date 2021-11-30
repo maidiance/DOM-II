@@ -76,3 +76,8 @@ document.addEventListener('copy', function(){
     nav.style.backgroundColor = 'Indigo';
     nav.style.color = 'GhostWhite';
 });
+
+// Paste
+document.addEventListener('paste', function(){
+    letsgoTitle.style.backgroundColor = 'RoyalBlue';
+});

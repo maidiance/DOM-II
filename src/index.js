@@ -23,16 +23,18 @@ headerP.addEventListener('mouseleave', function(){
 const contentSection = document.querySelector('.content-section');
 const letsgo = contentSection.querySelector('.text-content');
 document.addEventListener('keydown', function(event){
-    console.log('letsgo');
+    //console.log('letsgo');
     if(event.key === 'p' || event.code === 'KeyP'){
         letsgo.style.backgroundColor = 'MediumPurple';
     }
 });
 
 // Select
-letsgo.addEventListener('select', function(event){
+const letsgoP = letsgo.querySelector('p');
+letsgoP.addEventListener('select', function(event){
     const selection = event.target.value.substring(event.target.selectionStart, event.target.selectionEnd);
+    console.log(selection);
     if(selection.toLowerCase() === 'adventure'){
-        letsgo.style.color = 'PowderBlue';
+        letsgoP.style.color = 'PowderBlue';
     }
 });

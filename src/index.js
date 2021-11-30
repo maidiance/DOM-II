@@ -22,9 +22,17 @@ headerP.addEventListener('mouseleave', function(){
 // Keydown
 const contentSection = document.querySelector('.content-section');
 const letsgo = contentSection.querySelector('.text-content');
-letsgo.addEventListener('keydown', function(event){
-    //console.log(event.key);
-    if(event.key === 'p'){
+document.addEventListener('keydown', function(event){
+    console.log('letsgo');
+    if(event.key === 'p' || event.code === 'KeyP'){
         letsgo.style.backgroundColor = 'MediumPurple';
+    }
+});
+
+// Select
+letsgo.addEventListener('select', function(event){
+    const selection = event.target.value.substring(event.target.selectionStart, event.target.selectionEnd);
+    if(selection.toLowerCase() === 'adventure'){
+        letsgo.style.color = 'PowderBlue';
     }
 });

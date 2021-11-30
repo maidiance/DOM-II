@@ -33,16 +33,16 @@ document.addEventListener('keydown', function(event){
 const letsgoP = letsgo.querySelector('p');
 letsgoP.addEventListener('select', function(event){
     const selection = event.target.value.substring(event.target.selectionStart, event.target.selectionEnd);
-    console.log(selection);
+    console.log('selected:', selection);
     if(selection.toLowerCase() === 'adventure'){
         letsgoP.style.color = 'PowderBlue';
     }
 });
 
 // Dblclick
-const letsgoImg = contentSection.querySelector('img');
-letsgoImg.addEventListener('dblclick', function(){
-    letsgoImg.setAttribute('transform', 'scale(1.3)');
+const letsgoTitle = letsgo.querySelector('h2');
+letsgoTitle.addEventListener('dblclick', function(){
+    letsgoTitle.style.color = 'PaleTurquoise';
 });
 
 // Click and PreventDefault

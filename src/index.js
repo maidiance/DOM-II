@@ -44,3 +44,11 @@ const letsgoImg = contentSection.querySelector('img');
 letsgoImg.addEventListener('dblclick', function(){
     letsgoImg.setAttribute('transform', 'scale(1.3)');
 });
+
+// Click and PreventDefault
+const nav = document.querySelector('nav');
+const homeLink = nav.querySelector('.nav-link');
+homeLink.addEventListener('click', function(event){
+    event.preventDefault();
+    homeLink.style.color = 'PeachPuff';
+})

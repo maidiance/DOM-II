@@ -38,3 +38,9 @@ letsgoP.addEventListener('select', function(event){
         letsgoP.style.color = 'PowderBlue';
     }
 });
+
+// Dblclick
+const letsgoImg = contentSection.querySelector('img');
+letsgoImg.addEventListener('dblclick', function(){
+    letsgoImg.setAttribute('transform', 'scale(1.3)');
+});

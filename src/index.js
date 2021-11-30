@@ -17,3 +17,14 @@ headerP.addEventListener('mouseleave', function(){
     headerP.style.backgroundColor = null;
     headerP.style.color = 'black';
 });
+
+
+// Keydown
+const contentSection = document.querySelector('.content-section');
+const letsgo = contentSection.querySelector('.text-content');
+letsgo.addEventListener('keydown', function(event){
+    //console.log(event.key);
+    if(event.key === 'p'){
+        letsgo.style.backgroundColor = 'MediumPurple';
+    }
+});

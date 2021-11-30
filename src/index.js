@@ -32,11 +32,13 @@ document.addEventListener('keydown', function(event){
 // Select
 const letsgoP = letsgo.querySelector('p');
 letsgoP.addEventListener('select', function(event){
+    event.preventDefault();
     const selection = event.target.value.substring(event.target.selectionStart, event.target.selectionEnd);
     console.log('selected:', selection);
     if(selection.toLowerCase() === 'adventure'){
         letsgoP.style.color = 'PowderBlue';
     }
+    event.stopPropagation();
 });
 
 // Dblclick
@@ -57,4 +59,14 @@ homeLink.addEventListener('click', function(event){
 const introWelcome = introHeader.querySelector('h2');
 introWelcome.addEventListener('wheel', function(){
     introWelcome.style.color = 'Violet';
+});
+
+const h1 = document.querySelector('h1');
+// Drag
+document.addEventListener('drag', function(){
+    h1.style.color = 'SkyBlue';
+});
+// Drop
+document.addEventListener('drop', function(){
+    h1.style.color = 'Salmon';
 });

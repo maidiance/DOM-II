@@ -30,16 +30,16 @@ document.addEventListener('keydown', function(event){
 });
 
 // Select
-const letsgoP = letsgo.querySelector('p');
-letsgoP.addEventListener('select', function(event){
-    event.preventDefault();
-    const selection = event.target.value.substring(event.target.selectionStart, event.target.selectionEnd);
-    console.log('selected:', selection);
-    if(selection.toLowerCase() === 'adventure'){
-        letsgoP.style.color = 'PowderBlue';
-    }
-    event.stopPropagation();
-});
+// const letsgoP = letsgo.querySelector('p');
+// letsgoP.addEventListener('select', function(event){
+//     event.preventDefault();
+//     const selection = event.target.value.substring(event.target.selectionStart, event.target.selectionEnd);
+//     console.log('selected:', selection);
+//     if(selection.toLowerCase() === 'adventure'){
+//         letsgoP.style.color = 'PowderBlue';
+//     }
+//     event.stopPropagation();
+// });
 
 // Dblclick
 const letsgoTitle = letsgo.querySelector('h2');
@@ -67,9 +67,9 @@ document.addEventListener('drag', function(){
     h1.style.color = 'SkyBlue';
 });
 // Drop
-document.addEventListener('drop', function(){
-    h1.style.backgroundColor = 'Salmon';
-});
+// document.addEventListener('drop', function(){
+//     h1.style.backgroundColor = 'Salmon';
+// });
 
 // Copy
 document.addEventListener('copy', function(){
@@ -80,4 +80,9 @@ document.addEventListener('copy', function(){
 // Paste
 document.addEventListener('paste', function(){
     letsgoTitle.style.backgroundColor = 'RoyalBlue';
+});
+
+// Cut
+document.addEventListener('cut', function(){
+    introWelcome.style.backgroundColor = 'RosyBrown';
 });
